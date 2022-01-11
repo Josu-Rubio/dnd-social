@@ -1,0 +1,17 @@
+.feed {
+  flex: 5.5;
+  /* height: calc(95vh - 50px); */
+  /* overflow-y: scroll; */
+}
+
+.feed:hover::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.feed:hover::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.feedWrapper {
+  padding: 20px;
+}
