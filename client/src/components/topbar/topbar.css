@@ -12,7 +12,15 @@
 
 .topbarLeft {
   flex: 3;
+  display: flex;
 }
+
+/* .logoImg {
+  width: 32px;
+  height: 32px;
+  border: 1px solid white;
+  margin-left: 20px;
+} */
 
 .logo {
   font-size: 24px;
