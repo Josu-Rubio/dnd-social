@@ -1,51 +1,51 @@
 export const Users = [
   {
-    id: 1,
+    _id: 1,
     profilePicture: 'person/1.jpeg',
     username: 'Safak Kocaoglu',
   },
   {
-    id: 2,
+    _id: 2,
     profilePicture: 'person/2.jpeg',
     username: 'Janel Shrum',
   },
   {
-    id: 3,
+    _id: 3,
     profilePicture: 'person/3.jpeg',
     username: 'Alex Durden',
   },
   {
-    id: 4,
+    _id: 4,
     profilePicture: 'person/4.jpeg',
     username: 'Dora Hawks',
   },
   {
-    id: 5,
+    _id: 5,
     profilePicture: 'person/5.jpeg',
     username: 'Thomas Holden',
   },
   {
-    id: 6,
+    _id: 6,
     profilePicture: 'person/6.jpeg',
     username: 'Shirley Beauchamp',
   },
   {
-    id: 7,
+    _id: 7,
     profilePicture: 'person/7.jpeg',
     username: 'Travis Bennett',
   },
   {
-    id: 8,
+    _id: 8,
     profilePicture: 'person/8.jpeg',
     username: 'Kristen Thomas',
   },
   {
-    id: 9,
+    _id: 9,
     profilePicture: 'person/9.jpeg',
     username: 'Gary Duty',
   },
   {
-    id: 10,
+    _id: 10,
     profilePicture: 'person/10.jpeg',
     username: 'Petunia Patayasa',
   },
@@ -53,7 +53,7 @@ export const Users = [
 
 export const Posts = [
   {
-    id: 1,
+    _id: 1,
     desc: 'Love for All, Hatred for None.',
     photo: 'post/1.jpeg',
     date: '5 mins ago',
@@ -62,7 +62,7 @@ export const Posts = [
     comment: 9,
   },
   {
-    id: 2,
+    _id: 2,
     desc: ' Hatred for None, Lova for All.',
     photo: 'post/2.jpeg',
     date: '10 mins ago',
@@ -71,7 +71,7 @@ export const Posts = [
     comment: 1,
   },
   {
-    id: 3,
+    _id: 3,
     desc: 'Hatred but loved.',
     photo: 'post/3.jpeg',
     date: '15 mins ago',
@@ -80,7 +80,7 @@ export const Posts = [
     comment: 3,
   },
   {
-    id: 4,
+    _id: 4,
     desc: 'Something else.',
     photo: 'post/4.jpeg',
     date: '20 mins ago',
@@ -89,7 +89,7 @@ export const Posts = [
     comment: 19,
   },
   {
-    id: 5,
+    _id: 5,
     desc: 'The fith post.',
     photo: 'post/5.jpeg',
     date: '25 mins ago',
@@ -98,7 +98,7 @@ export const Posts = [
     comment: 5,
   },
   {
-    id: 6,
+    _id: 6,
     desc: 'Lova None.',
     photo: 'post/6.jpeg',
     date: '30 mins ago',
@@ -107,7 +107,7 @@ export const Posts = [
     comment: 57,
   },
   {
-    id: 7,
+    _id: 7,
     desc: 'Lova for All, Hatred for None.',
     photo: 'post/7.jpeg',
     date: '35 mins ago',
@@ -116,7 +116,7 @@ export const Posts = [
     comment: 9,
   },
   {
-    id: 8,
+    _id: 8,
     desc: 'Somthing something.',
     photo: 'post/8.jpeg',
     date: '40 mins ago',
@@ -125,7 +125,7 @@ export const Posts = [
     comment: 9,
   },
   {
-    id: 9,
+    _id: 9,
     desc: 'Tired of titles.',
     photo: 'post/9.jpeg',
     date: '45 mins ago',
@@ -134,7 +134,7 @@ export const Posts = [
     comment: 9,
   },
   {
-    id: 10,
+    _id: 10,
     desc: 'Petunia loves mocci',
     photo: 'post/10.jpeg',
     date: '50 mins ago',
