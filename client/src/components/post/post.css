@@ -50,7 +50,6 @@
 .postImg {
   margin-top: 20px;
   width: 100%;
-  min-height: 500px;
   object-fit: content;
 }
 
