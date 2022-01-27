@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import './register.css';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import { useState } from 'react';
 
 export default function Register() {
   const username = useRef();
@@ -9,6 +10,20 @@ export default function Register() {
   const password = useRef();
   const passwordAgain = useRef();
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+
+  const AlertBox = () => {
+    return (
+      <>
+        <div className='alert'>
+          <span className='closebtn' onClick={navigate('/login')}>
+            &times;
+          </span>
+          This is an alert box.
+        </div>
+      </>
+    );
+  };
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -22,6 +37,7 @@ export default function Register() {
       };
       try {
         await axios.post('/auth/register', user);
+        alert('Wellcome to the Dungeon, player!');
         navigate('/login');
       } catch (err) {
         console.log(err);

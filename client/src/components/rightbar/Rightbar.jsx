@@ -42,7 +42,9 @@ export default function Rightbar({ user }) {
         dispatch({ type: 'FOLLOW', payload: user._id });
       }
       setFollowed(!followed);
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const HomeRightBar = () => {
