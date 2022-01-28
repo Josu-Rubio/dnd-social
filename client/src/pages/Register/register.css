@@ -1,81 +1,137 @@
-.login {
-  background-color: #fffebd;
+.register {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f2f5;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.loginWrapper {
+.registerWrapper {
   width: 70%;
   height: 70%;
   display: flex;
 }
 
-.loginLeft,
-.loginRight {
+.registerImg {
+  position: absolute;
+  display: flex;
+  margin-left: -5rem;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.registerLeft,
+.registerRight {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.loginLogo {
-  font-size: 50px;
+.registerLogo {
+  font-size: 3rem;
   font-weight: 800;
   color: #930c10;
   margin-bottom: 10px;
+  text-shadow: 2px 2px black;
+  z-index: 1;
 }
 
-.loginDesc {
-  font-size: 24px;
+.registerDesc {
+  font-size: 1.5rem;
+  z-index: 1;
+  color: white;
+  text-shadow: 2px 2px 1px black;
 }
 
-.loginBox {
-  height: 400px;
-  padding: 20px;
-  background-color: #f7ce65;
+.registerBox {
+  height: 25rem;
+  padding: 1rem;
+  background-color: #f7ce65cc;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 1;
 }
 
-.loginInput {
-  height: 50px;
-  border-radius: 10px;
+.registerInput {
+  height: 3rem;
+  border-radius: 20% 10px;
   border: 1px solid grey;
   font-size: 18px;
   padding-left: 20px;
 }
 
-.loginInput:focus {
+.registerInput:focus {
   outline: none;
 }
 
-.loginButton {
-  height: 50px;
+.registerButton {
+  height: 3rem;
+  width: 80%;
+  align-self: center;
   border-radius: 10px;
   border: none;
   background-color: #930c10;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
 }
 
-.loginForgot {
-  text-align: center;
-  color: #1775ee;
-}
-
-.loginRegisterButton {
-  height: 50px;
+.toLoginButton {
+  height: 3rem;
   width: 60%;
   align-self: center;
   border-radius: 10px;
   border: none;
   background-color: #290000;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.registerButton:active {
+  background: #930c10;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+}
+
+.toLoginButton:active {
+  background: #290000;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+}
+
+@media (max-width: 1025px) and (orientation: portrait) {
+  .registerWrapper {
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+  }
+
+  .registerImg {
+    margin-left: -25%;
+  }
+
+  .registerRight {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .registerImg {
+    margin-left: -10%;
+  }
+  .registerRight {
+    width: 90%;
+  }
 }

@@ -6,6 +6,7 @@ import './login.css';
 import { Link } from 'react-router-dom';
 
 export default function Login() {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const email = useRef();
   const password = useRef();
   const { user, isFetching, err, dispatch } = useContext(AuthContext);
@@ -22,8 +23,9 @@ export default function Login() {
     <div className='login'>
       <div className='loginWrapper'>
         <div className='loginLeft'>
+          <img className='loginImg' src={PF + './main/login.png'} alt='' />
           <h3 className='loginLogo'>D&#38;DSocial</h3>
-          <span className='loginDesc'>Connect with other players</span>
+          <span className='loginDesc'>Bienvenido de nuevo, aventurero!</span>
         </div>
         <div className='loginRight'>
           <form className='loginBox' onSubmit={handleClick}>
@@ -46,11 +48,11 @@ export default function Login() {
               {isFetching ? (
                 <CircularProgress color='inherit' size='25px' />
               ) : (
-                'Log In'
+                'Entrar'
               )}
             </button>
-            <span className='loginForgot'>Forgot Password?</span>
-            <button className='loginRegisterButton'>
+            <span className='loginForgot'>Olvidaste tu contraseña?</span>
+            <button className='toRegisterButton'>
               <Link
                 to='/register'
                 style={{ textDecoration: 'none', color: 'white' }}
@@ -58,7 +60,7 @@ export default function Login() {
                 {isFetching ? (
                   <CircularProgress color='inherit' size='25px' />
                 ) : (
-                  'Create new account'
+                  'Crear cuenta nueva'
                 )}
               </Link>
             </button>

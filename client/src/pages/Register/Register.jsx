@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useState } from 'react';
 
 export default function Register() {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const username = useRef();
   const email = useRef();
   const password = useRef();
@@ -16,7 +17,7 @@ export default function Register() {
     return (
       <>
         <div className='alert'>
-          <span className='closebtn' onClick={navigate('/login')}>
+          <span className='closebtn' onClick={navigate('/register')}>
             &times;
           </span>
           This is an alert box.
@@ -38,7 +39,7 @@ export default function Register() {
       try {
         await axios.post('/auth/register', user);
         alert('Wellcome to the Dungeon, player!');
-        navigate('/login');
+        navigate('/register');
       } catch (err) {
         console.log(err);
       }
@@ -46,33 +47,41 @@ export default function Register() {
   };
 
   return (
-    <div className='login'>
-      <div className='loginWrapper'>
-        <div className='loginLeft'>
-          <h3 className='loginLogo'>D&#38;DSocial</h3>
-          <span className='loginDesc'>Connect with other players</span>
+    <div className='register'>
+      <div className='registerWrapper'>
+        <div className='registerLeft'>
+          <img
+            className='registerImg'
+            src={PF + './main/register.png'}
+            alt=''
+          />
+          <h3 className='registerLogo'>D&#38;DSocial</h3>
+          <span className='registerDesc'>
+            Bienvenido, aventurero... <br />
+            Aquí comienza tu campaña
+          </span>
         </div>
-        <div className='loginRight'>
-          <form className='loginBox' onSubmit={handleClick}>
+        <div className='registerRight'>
+          <form className='registerBox' onSubmit={handleClick}>
             <input
               placeholder='Username'
               required
               ref={username}
-              className='loginInput'
+              className='registerInput'
             />
             <input
               placeholder='Email'
               type='email'
               required
               ref={email}
-              className='loginInput'
+              className='registerInput'
             />
             <input
               placeholder='Password'
               type='password'
               required
               ref={password}
-              className='loginInput'
+              className='registerInput'
               minLength='6'
             />
             <input
@@ -80,17 +89,17 @@ export default function Register() {
               type='password'
               required
               ref={passwordAgain}
-              className='loginInput'
+              className='registerInput'
             />
-            <button className='loginButton' type='submit'>
-              Sign Up
+            <button className='registerButton' type='submit'>
+              Registrarse
             </button>
-            <button className='loginRegisterButton'>
+            <button className='toLoginButton'>
               <Link
                 to='/login'
                 style={{ textDecoration: 'none', color: 'white' }}
               >
-                Log Into Account
+                Entrar en mi cuenta
               </Link>
             </button>
           </form>

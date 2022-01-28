@@ -1,5 +1,5 @@
 .login {
-  width: 100vw - 7px;
+  width: 100%;
   height: 97vh;
   background-color: #f0f2f5;
   display: flex;
@@ -13,6 +13,14 @@
   display: flex;
 }
 
+.loginImg {
+  position: absolute;
+  display: flex;
+  margin-left: -20rem;
+  max-width: 90%;
+  max-height: 90%;
+}
+
 .loginLeft,
 .loginRight {
   flex: 1;
@@ -24,27 +32,33 @@
 .loginLogo {
   font-size: 50px;
   font-weight: 800;
-  color: #1775ee;
+  color: #930c10;
   margin-bottom: 10px;
+  text-shadow: 2px 2px black;
+  z-index: 1;
 }
 
 .loginDesc {
-  font-size: 24px;
+  font-size: 1.5rem;
+  z-index: 1;
+  color: white;
+  text-shadow: 2px 2px 1px black;
 }
 
 .loginBox {
-  height: 300px;
-  padding: 20px;
-  background-color: #fff;
+  height: 20rem;
+  padding: 1rem;
+  background-color: #f7ce65cc;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 1;
 }
 
 .loginInput {
-  height: 50px;
-  border-radius: 10px;
+  height: 3rem;
+  border-radius: 20% 10px;
   border: 1px solid grey;
   font-size: 18px;
   padding-left: 20px;
@@ -55,29 +69,74 @@
 }
 
 .loginButton {
-  height: 50px;
+  height: 3rem;
+  width: 80%;
+  align-self: center;
   border-radius: 10px;
   border: none;
-  background-color: #1775ee;
+  background-color: #930c10;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
 }
 
 .loginForgot {
   text-align: center;
-  color: #1775ee;
+  color: #930c10;
 }
 
-.loginRegisterButton {
-  height: 50px;
+.toRegisterButton {
+  height: 3rem;
   width: 60%;
   align-self: center;
   border-radius: 10px;
   border: none;
-  background-color: #42b72a;
+  background-color: #290000;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.loginButton:active {
+  background: #930c10;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+}
+
+.toRegisterButton:active {
+  background: #290000;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+}
+
+@media (max-width: 1025px) and (orientation: portrait) {
+  .loginWrapper {
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+  }
+
+  .loginImg {
+    margin-left: -25%;
+  }
+
+  .loginRight {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .loginImg {
+    margin-left: -10%;
+  }
+  .loginRight {
+    width: 90%;
+  }
 }
