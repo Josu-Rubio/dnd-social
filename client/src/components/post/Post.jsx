@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 
 export default function Post({ post }) {
+  const nl2br = require('react-nl2br');
   const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
   const [user, setUser] = useState({});
@@ -65,7 +66,7 @@ export default function Post({ post }) {
           </div>
         </div>
         <div className='postCenter'>
-          <span className='postText'>{post?.desc}</span>
+          <span className='postText'>{nl2br(post?.desc)}</span>
           <img className='postImg' src={PF + post.photo} alt='' />
         </div>
         <div className='postBottom'>
