@@ -12,7 +12,10 @@ export default function Topbar() {
     <div className='topbarContainer'>
       <div className='topbarLeft'>
         <Link to='/' style={{ textDecoration: 'none' }}>
-          {/* <img className='logoImg' src={PF + '/logo512.png'} alt='' /> */}
+          <img className='logoImg' src={PF + '/logo512.png'} alt='' />
+        </Link>
+
+        <Link to='/' style={{ textDecoration: 'none' }}>
           <span className='logo'>D&#38;DSocial</span>
         </Link>
       </div>

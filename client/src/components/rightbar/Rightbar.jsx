@@ -56,7 +56,12 @@ export default function Rightbar({ user }) {
             <b>Pola Foster</b> and <b>3 other friends</b> have birthday today
           </span>
         </div>
-        <img className='rigthbarAd' src={`${PF}ad.png`} alt='' />
+
+        <iframe
+          className='playlist'
+          src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1387311289%3Fsecret_token%3Ds-oV3YTwUcrCj&color=%23222020&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true'
+        ></iframe>
+
         <h4 className='rightbarTitle'>Friends Online</h4>
         <ul className='rightbarFriendsList'>
           {Users.map((u) => (

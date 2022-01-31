@@ -23,14 +23,20 @@
   margin-right: 10px;
 }
 
-[contenteditable='true']:empty:before {
-  content: attr(placeholder);
-  pointer-events: none;
-  display: block;
+/* .shareInput[contenteditable='true'] {
 }
+:empty::before {
+  content: 'Placeholder still possible';
+  color: gray;
+} */
 
-.shareInput[contenteditable='true'] {
-  width: 80%;
+.shareInput {
+  resize: vertical;
+  min-height: 2rem;
+  max-height: 20rem;
+  border: none;
+  display: block;
+  width: 90%;
   padding: 5px;
 }
 

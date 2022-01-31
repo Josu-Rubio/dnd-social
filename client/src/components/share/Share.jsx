@@ -54,12 +54,12 @@ export default function Share() {
             }
             alt=''
           />
-          <div
-            contenteditable='true'
+          <textarea
+            type='text'
             placeholder={`What's in your mind, ${user.username}?`}
             className='shareInput'
             ref={desc}
-          ></div>
+          ></textarea>
         </div>
         <hr className='shareHr' />
         {file && (
@@ -83,7 +83,7 @@ export default function Share() {
                 onChange={(e) => setFile(e.target.files[0])}
               />
             </label>
-            <div className='shareOption'>
+            {/* <div className='shareOption'>
               <Label htmlColor='blue' className='shareIcon' />
               <span className='shareOptionText'>Tag</span>
             </div>
@@ -94,7 +94,7 @@ export default function Share() {
             <div className='shareOption'>
               <EmojiEmotions htmlColor='goldenrod' className='shareIcon' />
               <span className='shareOptionText'>Feelings</span>
-            </div>
+            </div> */}
           </div>
           <button className='shareButton' type='submit'>
             Share
