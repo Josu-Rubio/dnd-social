@@ -14,27 +14,23 @@
 }
 
 .birthdayImg {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.5rem;
 }
 
 .birthdayText {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .playlist {
   align-self: center;
   width: 90%;
   height: 20rem;
-  border-radius: 10px;
+  border-radius: 1rem;
   border: 3px solid black;
-  margin: 30px 0;
-}
-
-.rightbarTitle {
-  margin-bottom: 20px;
+  margin: 2rem 0;
 }
 
 .rightbarFriendsList {
@@ -44,22 +40,22 @@
 }
 
 .rightbarTitle {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .rightbarInfo {
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }
 
 .rightbarInfoItem {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .rightbarInfoKey {
   font-weight: bold;
-  margin-right: 15px;
+  margin-right: 1rem;
   color: #555;
 }
 
@@ -76,33 +72,30 @@
 .rightbarfollowins {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   cursor: pointer;
 }
 
 .rightbarfollowinsImg {
-  width: 100px;
-  height: 100px;
+  width: 7rem;
+  height: 7rem;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .rightbarFollowButton {
-  width: 5rem;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  width: 7rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   border: none;
-  background-color: #1872f2;
-  color: white;
-  border-radius: 5px;
-  padding: 5px 10px;
+  background-color: #f7ce65;
+  color: #290000;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
   display: flex;
   align-items: center;
-  font-size: 16px;
+  justify-content: center;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
 }
-
-/* .rightbarFollowButton:focus {
-  outline: none;
-} */

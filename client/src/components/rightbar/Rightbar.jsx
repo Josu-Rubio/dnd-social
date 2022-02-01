@@ -11,10 +11,8 @@ export default function Rightbar({ user }) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const [friends, setFriends] = useState([]);
   const { user: currentUser, dispatch } = useContext(AuthContext);
-  const [followed, setFollowed] = useState(
-    // This user?._id is not working properly. Fix ahead
-    currentUser.followins.includes(user?._id)
-  );
+  // we have changed here useState for this variable. It's working -_-
+  let followed = currentUser.followins.includes(user?._id);
 
   useEffect(() => {
     const getFriends = async () => {
@@ -41,7 +39,7 @@ export default function Rightbar({ user }) {
         });
         dispatch({ type: 'FOLLOW', payload: user._id });
       }
-      setFollowed(!followed);
+      followed = !followed;
     } catch (err) {
       console.log(err);
     }
