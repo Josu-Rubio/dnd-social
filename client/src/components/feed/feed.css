@@ -1,8 +1,9 @@
 .feed {
   flex: 5.5;
+}
 
-  /* height: calc(95vh - 50px); */
-  /* overflow-y: scroll; */
+::-webkit-scrollbar-y {
+  width: 7px;
 }
 
 .feed:hover::-webkit-scrollbar-track {
@@ -14,5 +15,5 @@
 }
 
 .feedWrapper {
-  padding: 20px;
+  padding: 1.5rem;
 }

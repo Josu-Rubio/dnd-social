@@ -35,10 +35,15 @@ export default function Share() {
       }
     }
 
-    try {
-      await axios.post('/posts', newPost);
-      window.location.reload();
-    } catch (err) {}
+    if (desc.current.value !== '' || file !== null) {
+      try {
+        await axios.post('/posts', newPost);
+        console.log(file);
+        window.location.reload();
+      } catch (err) {}
+    } else {
+      alert('You must share a comment or a file');
+    }
   };
 
   return (

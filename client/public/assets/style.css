@@ -66,10 +66,6 @@ body {
   -ms-text-size-adjust: none;
 }
 
-body {
-  height: 100vh;
-}
-
 #root {
   height: 100%;
   width: 100%;
