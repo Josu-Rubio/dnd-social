@@ -50,6 +50,7 @@ router.get('/', async (req, res) => {
       ? await User.findById(userId)
       : await User.findOne({ username: username });
     const { password, updatedAt, ...other } = user._doc;
+    // console.log(user);
     res.status(200).json(other);
   } catch (err) {
     res.status(500).json(err);
@@ -57,6 +58,16 @@ router.get('/', async (req, res) => {
 });
 
 //GET ALL USERS
+router.get('/usersList', function (req, res) {
+  User.find({}, function (err, users) {
+    var userMap = {};
+    users.forEach(function (user) {
+      const { password, updatedAt, createdAt, ...other } = user._doc;
+      userMap[user._id] = other;
+    });
+    res.send(userMap);
+  });
+});
 
 // GET FRIENDS
 router.get('/friends/:userId', async (req, res) => {
