@@ -18,8 +18,6 @@ import { AuthContext } from '../../context/AuthContext';
 export default function Sidebar() {
   const [allUsers, setAllUsers] = useState([]);
   const { user: currentUser, dispatch } = useContext(AuthContext);
-  // We could add also a filter for friends so they don't appear on the rightbar
-  // We are working on it
   const userFriends = currentUser.followins;
 
   function randomArrayShuffle(array) {
@@ -42,16 +40,14 @@ export default function Sidebar() {
         const usersList = await axios.get('/users/usersList');
         const values = Object.values(usersList.data);
         for (let i = 0; i < values.length; i++) {
-          if (values[i]._id === currentUser._id) {
-            values.splice(i, 1);
-            // } else {
-            //   for (let j = 0; j < userFriends.length; j++) {
-            //     if (values[i]._id === userFriends[j]) {
-            //       values.splice(i, 1);
-            //     }
-            //   }
+          for (let j = 0; j < userFriends.length; j++) {
+            if (
+              values[i]._id === currentUser._id ||
+              values[i]._id === userFriends[j]
+            ) {
+              values.splice(i, 1);
+            }
           }
-          console.log(values);
         }
         setAllUsers(values);
       } catch (err) {
