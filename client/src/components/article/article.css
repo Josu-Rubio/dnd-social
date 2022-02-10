@@ -1,91 +1,98 @@
-.post {
-  background-color: #fffebd;
-  width: 100%;
+.article {
+  flex: 8.5;
+  margin: 2rem;
+  height: 90%;
+  background-image: url('../../../public/assets/paperBackground.jpg');
+  box-shadow: 0.5rem 0.5rem 2rem black, 0 0 4rem #8a4d0f inset;
+  /* background: #fffef0; */
   border-radius: 1rem;
-  -webkit-box-shadow: 0px 0px 0.5rem rgb(92, 92, 92), 0 0 2rem #8a4d0f inset;
-  box-shadow: 0px 0px 0.5rem rgb(92, 92, 92), 0 0 2rem #8a4d0f inset;
-  margin: 2rem 0;
+  filter: url(#wavy2);
 }
 
-.postWrapper {
-  padding: 0.5rem;
+.articleWrapper {
+  padding: 1rem;
 }
 
-.postTop {
+.articleTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.postTopLeft {
+.articleTopLeft {
   display: flex;
   align-items: center;
 }
 
-.postProfileImg {
+.articleProfileImg {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.postUsername {
+.articleUsername {
   color: black;
   font-size: 1rem;
   font-weight: 700;
   margin: 0 0.5rem;
 }
 
-.postUsername:hover {
+.articleUsername:hover {
   text-decoration: underline;
 }
 
-.postDate {
-  font-size: 0.75rem;
+.articleDate {
+  font-size: 1rem;
+  align-self: flex-end;
 }
 
-.postCenter {
+.articleCenter {
   display: flex;
   margin: 1rem 0;
   flex-direction: column;
 }
 
-.postText {
+.articleTitle {
+  align-self: center;
+}
+
+.articleText {
   align-self: center;
   width: 95%;
   text-align: justify;
   text-justify: inter-word;
 }
 
-.postImg {
+.articleImg {
   margin-top: 1rem;
   width: 100%;
   object-fit: content;
 }
 
-.postBottom {
+.articleBottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.postBottomLeft {
+.articleBottomLeft {
   display: flex;
   align-items: center;
 }
 
 .likeIcon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
-.postLikeCounter {
+.articleLikeCounter {
   font-size: 1rem;
 }
 
-.postCommentText {
+.articleCommentText {
   cursor: pointer;
   border-bottom: 1px dashed gray;
   font-size: 1rem;

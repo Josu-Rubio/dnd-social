@@ -1,0 +1,31 @@
+.radios {
+  flex: 9;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 1rem;
+}
+
+.spotifyRep {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.spotifyBotched {
+  margin-top: 1rem;
+  padding: 1rem;
+  height: 15rem;
+}
+
+.spotifyBotched::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.spotifyBotched::-webkit-scrollbar-thumb {
+  background: transparent;
+}

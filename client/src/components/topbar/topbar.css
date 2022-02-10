@@ -106,3 +106,23 @@
   object-fit: cover;
   cursor: pointer;
 }
+
+.toggleLinks {
+  display: flex;
+}
+
+.toLogin {
+  color: #290000;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f7ce65;
+  height: 2rem;
+  width: 80%;
+  display: flex;
+  border-radius: 10%;
+  align-items: center;
+  justify-content: center;
+}

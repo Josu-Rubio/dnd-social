@@ -31,35 +31,65 @@ export default function Topbar() {
       <div className='topbarRight'>
         <div className='topbarLinks'>
           <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
-            <span className='topbarLink'>Homepage</span>
+            <span className='topbarLink'>Home</span>
           </Link>
-          <span className='topbarLink'>Timeline</span>
+          <Link
+            to='/social'
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <span className='topbarLink'>Social</span>
+          </Link>
         </div>
-        <div className='topbarIcons'>
-          <div className='topbarIconItem'>
-            <Person />
-            <span className='topbarIconBadge'>1</span>
+        {user ? (
+          <div className='topbarIcons'>
+            <div className='topbarIconItem'>
+              <Person />
+              <span className='topbarIconBadge'>1</span>
+            </div>
+            <div className='topbarIconItem'>
+              <Link to='/messenger'>
+                <Chat style={{ color: 'black' }} />
+              </Link>
+              <span className='topbarIconBadge'>1</span>
+            </div>
+            <div className='topbarIconItem'>
+              <Notifications />
+              <span className='topbarIconBadge'>1</span>
+            </div>
           </div>
-          <div className='topbarIconItem'>
-            <Chat />
-            <span className='topbarIconBadge'>1</span>
-          </div>
-          <div className='topbarIconItem'>
-            <Notifications />
-            <span className='topbarIconBadge'>1</span>
-          </div>
+        ) : (
+          <></>
+        )}
+        <div>
+          {user ? (
+            <Link to={`/profile/${user.username}`}>
+              <img
+                src={
+                  user.profilePicture
+                    ? PF + user.profilePicture
+                    : PF + 'person/noAvatar.png'
+                }
+                alt=''
+                className='topbarImg'
+              />
+            </Link>
+          ) : (
+            <div className='toggleLinks'>
+              <Link
+                to={'/register'}
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <div className='toLogin'>Register</div>
+              </Link>
+              <Link
+                to={'/login'}
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <div className='toLogin'>Login</div>
+              </Link>
+            </div>
+          )}
         </div>
-        <Link to={`/profile/${user.username}`}>
-          <img
-            src={
-              user.profilePicture
-                ? PF + user.profilePicture
-                : PF + 'person/noAvatar.png'
-            }
-            alt=''
-            className='topbarImg'
-          />
-        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,29 @@
+.sidebarList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebarListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sidebarIcon {
+  margin-right: 1rem;
+  color: #290000;
+}
+
+.sidebarButton {
+  background-color: #f7ce65;
+  width: 10rem;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.sidebarHr {
+  margin: 1rem 0;
+}

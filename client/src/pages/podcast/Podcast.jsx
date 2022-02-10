@@ -1,10 +1,9 @@
 import Topbar from '../../components/topbar/Topbar';
 import SidebarList from '../../components/sidebarList/SidebarList';
-import BlogPost from '../../components/blogPost/BlogPost';
-import './home.css';
-import Article from '../../components/article/Article';
+import './podcast.css';
+import Radios from '../../components/radios/Radios';
 
-export default function Home() {
+export default function Podcast() {
   return (
     <>
       <Topbar />
@@ -12,10 +11,9 @@ export default function Home() {
         <div className='sidebar'>
           <div className='sidebarWrapper'>
             <SidebarList />
-            <BlogPost />
           </div>
         </div>
-        <Article />
+        <Radios />
       </div>
     </>
   );

@@ -5,6 +5,8 @@
   overflow-y: scroll;
   position: sticky;
   top: 2rem;
+  -webkit-box-shadow: 0px 0px 0.5rem rgb(92, 92, 92), 0 0 3rem #8a4d0f inset;
+  box-shadow: 0px 0px 0.5rem rgb(92, 92, 92), 0 0 3rem #8a4d0f inset;
 }
 
 ::-webkit-scrollbar-y {
@@ -28,36 +30,6 @@
 
 .sidebarWrapper {
   padding: 1.5rem;
-}
-
-.sidebarList {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.sidebarListItem {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.sidebarIcon {
-  margin-right: 1rem;
-  color: #290000;
-}
-
-.sidebarButton {
-  background-color: #f7ce65;
-  width: 10rem;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-}
-
-.sidebarHr {
-  margin: 1rem 0;
 }
 
 h1 {

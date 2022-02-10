@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import axios from 'axios';
 import Topbar from '../../components/topbar/Topbar';
-import Sidebar from '../../components/sidebar/Sidebar';
+import SocialSidebar from '../../components/socialSidebar/SocialSidebar';
 import Feed from '../../components/feed/Feed';
 import Rightbar from '../../components/rightbar/Rightbar';
 import './profile.css';
@@ -26,7 +26,7 @@ export default function Profile() {
     <>
       <Topbar />
       <div className='profile'>
-        <Sidebar />
+        <SocialSidebar />
         <div className='profileRight'>
           <div className='profileRightTop'>
             <div className='profileCover'>

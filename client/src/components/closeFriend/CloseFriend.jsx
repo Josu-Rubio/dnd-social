@@ -12,7 +12,11 @@ export default function CloseFriend({ user }) {
       >
         <img
           className='sidebarFriendImg'
-          src={PF + user.profilePicture}
+          src={
+            user.profilePicture
+              ? PF + user.profilePicture
+              : PF + '/person/noAvatar.png'
+          }
           alt=''
         />
       </Link>
