@@ -38,7 +38,7 @@
 }
 
 .spotifyPlaylist {
-  background-image: url('../../../public/assets/images/paperBackground.jpg');
+  background-image: url('../../../public/images/paperBackground.jpg');
   box-shadow: 0.5rem 0.5rem 2rem black, 0 0 4rem #8a4d0f inset;
   margin-top: 1rem;
   padding: 1rem;
