@@ -16,14 +16,7 @@ const path = require('path');
 dotenv.config();
 
 const PORT = process.env.PORT || 8800;
-
-mongoose.connect(
-  process.env.MONGO_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => {
-    console.log('Connected to mongoDB');
-  }
-);
+const dbUri = process.env.MONGO_URL;
 
 if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets
@@ -65,6 +58,14 @@ app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 
-app.listen(PORT, () => {
-  console.log('Backend server is running!');
-});
+mongoose
+  .connect(dbUri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then((result) =>
+    app.listen(PORT, () => {
+      console.log('Backend server is running!');
+    })
+  )
+  .catch((err) => console.log(err));
