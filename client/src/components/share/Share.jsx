@@ -14,6 +14,7 @@ export default function Share() {
   const desc = useRef();
   const { user } = useContext(AuthContext);
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const PU = process.env.PUBLIC_URL;
   const [file, setFile] = useState(null);
 
   const submitHandler = async (e) => {
@@ -55,7 +56,7 @@ export default function Share() {
             src={
               user.profilePicture
                 ? PF + user.profilePicture
-                : PF + 'person/noAvatar.png'
+                : PU + '/images/noAvatar.png'
             }
             alt=''
           />

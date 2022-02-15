@@ -12,6 +12,7 @@ export default function Profile() {
   const username = useParams().username;
 
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const PU = process.env.PUBLIC_URL;
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -35,7 +36,7 @@ export default function Profile() {
                 src={
                   user.coverPicture
                     ? PF + user.coverPicture
-                    : PF + 'person/noCover.png'
+                    : PU + '/images/noCover.png'
                 }
                 alt=''
               />
@@ -44,7 +45,7 @@ export default function Profile() {
                 src={
                   user.profilePicture
                     ? PF + user.profilePicture
-                    : PF + 'person/noAvatar.png'
+                    : PU + '/images/noAvatar.png'
                 }
                 alt=''
               />

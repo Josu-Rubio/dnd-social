@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function Login() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const PU = process.env.PUBLIC_URL;
   const email = useRef();
   const password = useRef();
   const { user, isFetching, err, dispatch } = useContext(AuthContext);
@@ -23,7 +24,7 @@ export default function Login() {
     <div className='login'>
       <div className='loginWrapper'>
         <div className='loginLeft'>
-          <img className='loginImg' src={PF + './main/login.png'} alt='' />
+          <img className='loginImg' src={PU + '/images/login.png'} alt='' />
           <h3 className='loginLogo'>D&#38;DSocial</h3>
           <span className='loginDesc'>Bienvenido de nuevo, aventurero!</span>
         </div>

@@ -14,6 +14,7 @@ export default function Post({ post }) {
   const { user: currentUser } = useContext(AuthContext);
 
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const PU = process.env.PUBLIC_URL;
 
   useEffect(() => {
     setIsLiked(post.likes.includes(currentUser._id));
@@ -48,7 +49,7 @@ export default function Post({ post }) {
                 src={
                   user.profilePicture
                     ? PF + user.profilePicture
-                    : PF + 'person/noAvatar.png'
+                    : PU + '/images/noAvatar.png'
                 }
                 alt=''
               />
@@ -73,17 +74,11 @@ export default function Post({ post }) {
           <div className='postBottomLeft'>
             <img
               className='likeIcon'
-              src={`${PF}like.png`}
+              src={`${PU}/images/shield.png`}
               onClick={likeHandler}
               alt=''
             />
-            <img
-              className='likeIcon'
-              src={`${PF}heart.png`}
-              onClick={likeHandler}
-              alt=''
-            />
-            <span className='postLikeCounter'>{like} people like this</span>
+            <span className='postLikeCounter'>{like} people support this</span>
           </div>
           <div className='postBottomRight'>
             <span className='postCommentText'>{post.comment} Comments</span>

@@ -9,6 +9,7 @@ import { Add, Remove } from '@material-ui/icons';
 
 export default function Rightbar({ user }) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const PU = process.env.PUBLIC_URL;
   const [friends, setFriends] = useState([]);
   const { user: currentUser, dispatch } = useContext(AuthContext);
   // we have changed here useState for this variable. It's working -_-
@@ -115,7 +116,7 @@ export default function Rightbar({ user }) {
                   src={
                     friend.profilePicture
                       ? PF + friend.profilePicture
-                      : PF + 'person/noAvatar.png'
+                      : PU + '/images/noAvatar.png'
                   }
                   alt=''
                 />

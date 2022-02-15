@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function CloseFriend({ user }) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const PU = process.env.PUBLIC_URL;
 
   return (
     <li className='sidebarFriend'>
@@ -15,7 +16,7 @@ export default function CloseFriend({ user }) {
           src={
             user.profilePicture
               ? PF + user.profilePicture
-              : PF + '/person/noAvatar.png'
+              : PU + '/images/noAvatar.png'
           }
           alt=''
         />

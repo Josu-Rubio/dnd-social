@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 export default function Register() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const PU = process.env.PUBLIC_URL;
   const username = useRef();
   const email = useRef();
   const password = useRef();
@@ -52,7 +53,7 @@ export default function Register() {
         <div className='registerLeft'>
           <img
             className='registerImg'
-            src={PF + './main/register.png'}
+            src={PU + '/images/register.png'}
             alt=''
           />
           <h3 className='registerLogo'>D&#38;DSocial</h3>

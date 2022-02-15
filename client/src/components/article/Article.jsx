@@ -3,6 +3,7 @@ import './article.css';
 
 export default function Article() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const PU = process.env.PUBLIC_URL;
 
   return (
     <div className='article'>
@@ -11,7 +12,7 @@ export default function Article() {
           <div className='articleTopLeft'>
             <img
               className='articleProfileImg'
-              src={PF + 'person/noAvatar.png'}
+              src={PU + '/images/noAvatar.png'}
               alt=''
             />
 
@@ -158,7 +159,7 @@ export default function Article() {
         </div>
         <div className='articleBottom'>
           <div className='articleBottomLeft'>
-            <img className='likeIcon' src={PF + 'shield.png'} alt='' />
+            <img className='likeIcon' src={PU + '/images/shield.png'} alt='' />
             <span className='articleLikeCounter'>5 people support this</span>
           </div>
           <div className='articleBottomRight'>
